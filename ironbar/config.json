@@ -1,0 +1,45 @@
+{
+  "monitors": {
+    "HDMI-A-1": [
+      {
+        "position": "top",
+        "height": 30,
+        "start": [],
+        "center": [
+          {
+            "type": "workspaces",
+            "favorites": [
+              "1",
+              "2",
+              "3"
+            ],
+            "all_monitors": true
+          },
+          {
+            "type": "clock"
+          }
+        ],
+        "end": [
+          
+        ]
+      },
+      {
+        "position": "bottom",
+        "height": 30,
+        "margin": {
+          "bottom": 10,
+          "right": 15,
+          "left": 15
+        },
+        "center": [
+          {
+            "type": "launcher",
+            "favorites": [],
+            "show_names": false,
+            "show_icons": true
+          }
+        ]
+      }
+    ]
+  }
+}
