@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 init() {
-  local mon_id pics_dir filename
+  local mon_id pics_dir
   declare -g mon_name screenshot_dir
 
   # ID й ім’я активного монітора
@@ -36,27 +36,44 @@ init() {
   mkdir -p "$screenshot_dir"
 }
 
+_copy_to_clipboard() {
+  local file="$1"
+
+  if command -v wl-copy >/dev/null 2>&1; then
+    wl-copy < "$file"
+  elif command -v xclip >/dev/null 2>&1; then
+    xclip -selection clipboard -t image/png -i "$file"
+  else
+    return 1
+  fi
+
+}
+
 monitor() {
+  local filename
   filename="$(date +%F_%H-%M-%S)_${mon_name}.png"
   grim -o "$mon_name" "$screenshot_dir/$filename"
 
-  notify-send "Screenshot saved on $mon_name" "$screenshot_dir/$filename"
+  _copy_to_clipboard "$screenshot_dir/$filename"
   exit 0
 }
 
 area() {
+  local filename
   filename="$(date +%F_%H-%M-%S).png"
   grim -g "$(slurp)" "$screenshot_dir/$filename"
 
-  notify-send "Screenshot saved on $mon_name" "$screenshot_dir/$filename"
+  _copy_to_clipboard "$screenshot_dir/$filename"
   exit 0
 }
 
 full() {
+  local filename
   filename="$(date +%F_%H-%M-%S)-full.png"
   grim "$screenshot_dir/$filename"
+  
+  _copy_to_clipboard "$screenshot_dir/$filename"
 
-  notify-send "Screenshot saved on $mon_name" "$screenshot_dir/$filename"
   exit 0
 }
 
