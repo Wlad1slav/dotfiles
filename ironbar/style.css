@@ -1,0 +1,41 @@
+.background {
+    background: transparent;
+    border-radius: 100px;
+}
+
+.workspaces {
+    /* background: rgba(0,0,0,0); */
+    /* padding-block: 10px; */
+}
+
+.workspaces .item {
+    /* background: radial-gradient(circle,rgba(227, 227, 227, 1) 0%, rgba(171, 201, 235, 1) 100%); */
+    border: none;
+    outline: none;
+    box-shadow: 2px 0 2px rgba(0,0,0,0.5);
+    border-radius: 100px;
+    padding: 0 9px;
+    margin-right: 10px;
+    
+}
+
+.workspaces .item.focused {
+    padding: 0 20px;
+    font-weight: bold;
+    background: linear-gradient(28deg,rgba(82, 42, 155, 1) 0%, rgba(87, 158, 199, 1) 68%, rgba(237, 83, 178, 1) 100%);    color: white;
+}
+
+.workspaces .item.visible {
+    /* background: red; */
+}
+
+.workspaces .item.urgent {
+    background: red;
+}
+
+.clock {
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
