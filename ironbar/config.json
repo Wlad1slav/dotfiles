@@ -9,19 +9,16 @@
           "right": 10,
           "left": 10
         },
-        "start": [
+        "start": [],
+        "center": [
           {
             "type": "workspaces",
             "favorites": [
               "1",
-              "2",
-              "3"
+              "2"
             ],
             "all_monitors": true
           }
-        ],
-        "center": [
-          
         ],
         "end": [
           {
