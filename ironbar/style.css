@@ -15,7 +15,7 @@
 
 .workspaces .item {
     /* background: radial-gradient(circle,rgba(227, 227, 227, 1) 0%, rgba(171, 201, 235, 1) 100%); */
-    background: rgb(25, 25, 25);
+    background: rgb(20, 20, 20);
     color: white;
     border: none;
     outline: none;
@@ -73,6 +73,6 @@
     color: white;
     font-size: 10px;
     background: linear-gradient(157deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    padding: 0 2px;
+    padding: 0 4px;
     border-radius: 100px;
 }
