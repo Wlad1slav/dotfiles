@@ -22,7 +22,8 @@
         ],
         "end": [
           {
-            "type": "clock"
+            "type": "clock",
+            "format": "%j/365 → %d/%m/%Y → %A %H:%M"
           },
           {
             "type": "notifications",
